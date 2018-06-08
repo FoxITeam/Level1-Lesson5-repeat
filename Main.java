@@ -21,19 +21,19 @@ public class Main {
 
         // Чтобы получить доступ к полям объекта, набираем:
         //logan.
-        logan.model = "Logan";
-        logan.year = 2004;
-        logan.color = "White";
+        logan.setModel("Logan");
+        logan.setYear(2004);
+        logan.setColor("White");
         // Вот мы задали индивидуальные значения, теперь она выглядит индивидуально!
 
         // Аналогия 1
-        lancer.model = "Lancer";
-        lancer.year = 2005;
-        lancer.color = "Red";
+        lancer.setModel("Lancer");
+        lancer.setYear(2005);
+        lancer.setColor(null);
 
         // Аналогия 2
         Car lada = new Car("Vesta");
-        System.out.println(lada.model);
+        //System.out.println(lada.carModel("Vesta"));
 
         Car honda = new Car("Civic", 2010, "Block");
 
@@ -48,8 +48,8 @@ public class Main {
         //* todo | Pattern = шаблон, это шаблон проектирования или паттер проектирования.
         // Используем Format
         String pattern = "Наша марка машины {0}, год выпуска {1}, цвет машины {2}";
-        System.out.println(MessageFormat.format(pattern, logan.model, logan.year, logan.color));
-        System.out.println(MessageFormat.format(pattern, lancer.model, lancer.year, lancer.color));
-        System.out.println(MessageFormat.format(pattern, honda.model, honda.year, honda.color));
+        System.out.println(MessageFormat.format(pattern, logan.getModel(), logan.getYear(), logan.getColor()));
+        System.out.println(MessageFormat.format(pattern, lancer.getModel(), lancer.getYear(), lancer.getColor()));
+        System.out.println(MessageFormat.format(pattern, honda.getModel(), honda.getYear(), honda.getColor()));
     }
 }

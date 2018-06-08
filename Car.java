@@ -18,9 +18,9 @@ public class Car {
      // Конструктор по умолчанию не видно, но он есть под капотом джавы. Если нажать ALT+ INSERT, то IDEA нам предложит
      // какую то быструю вставку и первой же строкой будет конструктор
 
-  String model;
-  int year;
-  String color;
+  private String model;
+  private int year;
+  private String color;
 
   // ALT + INSERT и мы выбрали конструктор.
         // По сути это метод, по имени этого класса "Car()", заметте - перегрузка методов тут позволена, так как она
@@ -72,6 +72,43 @@ public class Car {
          this.color = color;
      }
 
+    public String getModel() {
+        return model;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setModel(String model) {
+        this.model = model;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    // Геттеры и сеттеры - это специальные методы, геттер - возвращает, сеттер - устанавливает. От англ туГет туСет.
+    // Alt + Insert - создает их.
+    // Геттеры и сеттеры ограничивают доступы к полу класса, через геттер можно обратиться, через сеттер установить.
+    // Геттеры и сеттеры нужны для огранизации бизнес логики, допустим мы хотим перекрасить машину, но Вам нужно
+    // узнать что цвет не прозрачный! И мы проверям тут, что if - если цвет прозрачный, устанавливать цвет не будем.
+    public void setColor(String color) {
+         if(color != null) {
+             this.color = color;
+         }else {
+             System.out.println("Нельзя покрасить машину в прозрачный цвет.");
+         }
+
+    }
+
+    // В данном случае (возвращаемся из класса инкапсуляция), только printInfo имеет открытый тип.
+    // То есть пользователь(другой кодер) не должен иметь возможности
+    // Ключевое слово new вызывает конструктор (конструктор класса)
      public void printInfo(){
          String pattern = "Наша марка машины {0}, год выпуска {1}, цвет машины {2}";
          System.out.println(MessageFormat.format(pattern, model, year, color));
