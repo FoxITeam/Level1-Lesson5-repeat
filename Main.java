@@ -1,5 +1,12 @@
 package ru.foxit.grayfox;
 
+/**
+ * Author Main.java - GrayFox | Ilya Lisin
+ * Contact: Skype: foxygameskype | Telegram: +7(925)316-65-82 | vk: https://vk.com/exsperto1
+ * GitHub: https://github.com/FoxITeam and https://github.com/GrayFoxIT
+ * encoding: UTF-8, Comments, remarks in Russian.
+ */
+
 import java.text.MessageFormat;
 
 /**
@@ -41,6 +48,8 @@ public class Main {
         lancer.printInfo();
         lada.printInfo();
         honda.printInfo();
+
+        Dog dog = new Dog("Такса", "Стас");
 
 
         //* todo | Класс MessageFormat и его статический метод format позволяет подставлять аргументы

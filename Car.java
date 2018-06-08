@@ -4,6 +4,13 @@
 // http://joxi.ru/ZrJzpbMC91daxr.jpg или https://pp.userapi.com/c846019/v846019096/6f14f/wavBB8Ao4Xc.jpg
 package ru.foxit.grayfox;
 
+/**
+ * Author Car.java - GrayFox | Ilya Lisin
+ * Contact: Skype: foxygameskype | Telegram: +7(925)316-65-82 | vk: https://vk.com/exsperto1
+ * GitHub: https://github.com/FoxITeam and https://github.com/GrayFoxIT
+ * encoding: UTF-8, Comments, remarks in Russian.
+ */
+
 import java.text.MessageFormat;
 
 // Alt + Insert - Создать класс, пакеты, при фокусе на scr или на пакетах (выбрать пакет или папку и нажать комбинацию).
